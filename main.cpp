@@ -23,6 +23,26 @@ int main() {
         cout << "0. Iseiti";
         cout << "Pasirinkite veiksma: ";
         cin >> pasirinkimas;
+
+        if (pasirinkimas == 1) {
+            if (esamasMokiniuSkaicius < MAX_MOKINIAI) {
+                cout << "Iveskite mokinio varda: ";
+                cin >> vardai[esamasMokiniuSkaicius];
+
+                int kiek;
+                cout << "Kiek pazymiu (IKI " << MAX_PAZYMIAI << ") norite ivesti? ";
+                cin >> kiek;
+
+                if (kiek == MAX_PAZYMIAI) kiek = MAX_PAZYMIAI; {
+
+                    pazymiuKiekis[esamasMokiniuSkaicius] = kiek;
+                    for (int i = 0; i < MAX_MOKINIAI; i++) {
+                        cout << "Iveskite " << i + 1 << "-aji pazymi :  ";
+                        cin >> pazymiai[esamasMokiniuSkaicius][i];
+                    }
+                }
+             }
+        }
     }
     // TIP Press <shortcut actionId="RenameElement"/> when your caret is at the <b>lang</b> variable name to see how CLion can help you rename it.
 
